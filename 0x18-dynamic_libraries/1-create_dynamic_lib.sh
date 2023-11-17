@@ -1,3 +1,4 @@
 #!/bin/bash
-gcc -fPIC -c *.C
-gcc -shred *.O -o liball.SO
+gcc -Wall -wextra -werror -pedantic -c -fPIC *.C
+gcc -shared -o liball.so *.0
+export LD_LIBRARY_PATH=.:$LD_LIBRARY_PATH
